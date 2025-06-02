@@ -1,0 +1,60 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f3f3f3;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 700px;
+  margin: 40px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+.months, .days {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.month-button, .day-button {
+  padding: 10px;
+  border: none;
+  background-color: #e0e0e0;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.month-button:hover, .day-button:hover {
+  background-color: #c0c0c0;
+}
+
+.month-button.active, .day-button.active {
+  background-color: #4caf50;
+  color: white;
+}
+
+#dayButtonsContainer {
+  display: none; /* Esconde os dias inicialmente */
+}
+
+#dayButtonsContainer.active {
+  display: grid; /* Mostra os dias quando o mês for escolhido */
+}
+
+audio {
+  width: 100%;
+  margin-top: 20px;
+}
